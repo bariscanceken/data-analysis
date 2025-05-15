@@ -5,8 +5,9 @@ import os
 import matplotlib.pyplot as plt
 import seaborn as sns
 sns.set(style="whitegrid")
+pd.set_option('display.max_rows', None)
 
-file_path = "gender_age_depression/data.csv"
+file_path = "data.csv"
 df = pd.read_csv(file_path, sep="\t")
 
 depression_question = ['Q3A', 'Q5A', 'Q10A', 'Q13A', 'Q16A', 'Q17A', 'Q21A','Q24A', 'Q26A', 'Q31A', 'Q34A', 'Q37A', 'Q38A', 'Q42A']
@@ -27,4 +28,4 @@ plt.ylabel('depression_score')
 plt.title('for woman age and depression_score average')
 plt.show()
 
-print(avg_depression_age_female)
+print(avg_depression_age_male)
